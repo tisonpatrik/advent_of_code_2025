@@ -3,9 +3,9 @@ data class Instructions(val direction: Char, val distance: Int)
 fun main() {
     val listOfInstructions: List<Instructions> = readInput("Day01")
         .filter { it.isNotBlank() }
-        .map { radek ->
-            val direction = radek[0]
-            val distance = radek.drop(1).trim().toInt()
+        .map { i ->
+            val direction = i[0]
+            val distance = i.drop(1).trim().toInt()
             Instructions(direction, distance)
         }
 
